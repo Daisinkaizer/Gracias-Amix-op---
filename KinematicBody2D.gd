@@ -1,7 +1,7 @@
 extends KinematicBody2D
 var velocidad = Vector2(0,0)
 
-var gravedad = 10;
+var gravedad = 15;
 
 
 
