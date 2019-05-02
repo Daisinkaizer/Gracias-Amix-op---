@@ -21,30 +21,30 @@ animations = [ {
 }, {
 "frames": [  ],
 "loop": true,
-"name": "Muerto",
+"name": "Dañado",
 "speed": 5.0
 }, {
 "frames": [  ],
 "loop": true,
-"name": "Dañado",
+"name": "Muerto",
 "speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 19.7316, 8.99213 )
 
-[node name="KinematicBody2D" type="KinematicBody2D"]
+[node name="Personaje" type="KinematicBody2D"]
 scale = Vector2( 1.92, 1.92 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite" type="AnimatedSprite" parent="."]
+[node name="Personaje" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "Nadando"
 frame = 4
 playing = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="colision_personaje" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
