@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/n_d_9.png-5257238d603e1c95203dd185f71bbba0.stex"
+path="res://.import/buzo5.png-1bbb67707bdea2f04f4efeb8f01c54f2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Nadando/n_d_9.png"
-dest_files=[ "res://.import/n_d_9.png-5257238d603e1c95203dd185f71bbba0.stex" ]
+source_file="res://assets/Nadando/buzo5.png"
+dest_files=[ "res://.import/buzo5.png-1bbb67707bdea2f04f4efeb8f01c54f2.stex" ]
 
 [params]
 
