@@ -2,7 +2,10 @@ extends KinematicBody2D
 var velocidad = Vector2(0,0)
 var screen_size;
 var gravedad = 15;
-var vida = 3
+var vida = 2
+signal hit
+
+
 
 func _ready():
     screen_size = get_viewport_rect().size
@@ -11,7 +14,6 @@ func _physics_process(delta):
 	
 	if velocidad.y < 100:
 		velocidad.y += gravedad;
-	
 	if Input.is_action_pressed("ui_right")and velocidad.x < 200:
 		velocidad.x += 200;
 	if Input.is_action_pressed("ui_left") and velocidad.x > -200:
@@ -34,3 +36,7 @@ func _on_Area2D_area_entered(area):
 	pass # Replace with function body.
 
 	print (vida)
+
+func _on_Personaje_hit():
+	
+	pass # Replace with function body.
