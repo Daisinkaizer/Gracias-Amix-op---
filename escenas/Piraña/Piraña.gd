@@ -5,7 +5,7 @@ extends AnimatedSprite
 # var b = "text"
 
 func _process(delta):
-	position.y = 5
+	position.y -= 5
 	pass
 
 
