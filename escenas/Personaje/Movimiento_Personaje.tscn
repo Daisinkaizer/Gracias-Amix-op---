@@ -44,7 +44,7 @@ position = Vector2( 1.36569, 0.468046 )
 scale = Vector2( 0.0960622, 0.0960622 )
 frames = SubResource( 1 )
 animation = "Nadando"
-frame = 6
+frame = 7
 playing = true
 
 [node name="Area2D" type="Area2D" parent="Personaje"]

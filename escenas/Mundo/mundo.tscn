@@ -9,11 +9,23 @@
 script = ExtResource( 1 )
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 2 )]
-position = Vector2( 75.1133, 96.4031 )
+position = Vector2( 52.9058, 53.8388 )
 
 [node name="Generador" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1044.22, 91.7573 )
 
 [node name="Generador2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 332.136, 483.341 )
+position = Vector2( 358.507, 645.085 )
 
+[node name="ScoreTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="StartTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="StartPosition" type="Position2D" parent="."]
+position = Vector2( 155.027, 212.568 )
+
+[connection signal="timeout" from="ScoreTimer" to="." method="_on_ScoreTimer_timeout"]
+[connection signal="timeout" from="StartTimer" to="." method="_on_StartTimer_timeout"]

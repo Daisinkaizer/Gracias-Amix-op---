@@ -22,8 +22,10 @@ func _physics_process(delta):
 		velocidad.x = 0;
 	if Input.is_action_just_pressed("ui_up"):
 		velocidad.y = -200
-		position.x = clamp(position.x, 0, screen_size.x)
+	position.x = clamp(position.x, 0, screen_size.x)
 	position.y = clamp(position.y, 0, screen_size.y)
+	if vida <= 0: 
+		vida = 0
 	pass
 	move_and_slide(velocidad)
 
@@ -31,3 +33,4 @@ func _on_Area2D_area_entered(area):
 	vida -= 1
 	pass # Replace with function body.
 
+	print (vida)

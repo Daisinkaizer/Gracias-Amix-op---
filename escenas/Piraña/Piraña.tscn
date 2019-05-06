@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/piraña/piraña_1.png" type="Texture" id=2]
 [ext_resource path="res://escenas/Piraña/Piraña.gd" type="Script" id=3]
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=3]
 animations = [ {
 "frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
 "loop": true,
@@ -12,19 +12,19 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 105.887, 170.159 )
+[sub_resource type="CapsuleShape2D" id=4]
+radius = 131.053
+height = 176.764
 
 [node name="Piraña" type="AnimatedSprite"]
 scale = Vector2( 0.0738138, 0.0738138 )
-frames = SubResource( 1 )
-playing = true
+frames = SubResource( 3 )
 script = ExtResource( 3 )
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
 
