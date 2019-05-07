@@ -5,8 +5,6 @@ var gravedad = 15;
 var vida = 2
 signal hit
 
-
-
 func _ready():
     screen_size = get_viewport_rect().size
 
@@ -31,12 +29,13 @@ func _physics_process(delta):
 	pass
 	move_and_slide(velocidad)
 
-func _on_Area2D_area_entered(area):
-	vida -= 1
-	pass # Replace with function body.
-
-	print (vida)
+#func _on_Area2D_area_entered(area):
+	#vida -= 1
+func _start(pos):
+	position = pos
+	show()
+	$colision_personaje.disabled = false
 
 func _on_Personaje_hit():
-	
+	queue_free()
 	pass # Replace with function body.
