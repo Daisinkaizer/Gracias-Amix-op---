@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tiburon_izq_1.png-26a8d98d85b68ba4696d013bbd2e907f.stex"
+path="res://.import/tiburonzin1.png-280689e1756911be7a7a6414021219b4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiburon/tiburon_izq_1.png"
-dest_files=[ "res://.import/tiburon_izq_1.png-26a8d98d85b68ba4696d013bbd2e907f.stex" ]
+source_file="res://assets/tiburon/tiburonzin1.png"
+dest_files=[ "res://.import/tiburonzin1.png-280689e1756911be7a7a6414021219b4.stex" ]
 
 [params]
 
