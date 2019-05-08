@@ -5,8 +5,10 @@ var gravedad = 15;
 var vida = 2
 signal hit
 
+
 func _ready():
-    screen_size = get_viewport_rect().size
+	#hide()
+	screen_size = get_viewport_rect().size
 
 func _physics_process(delta):
 	

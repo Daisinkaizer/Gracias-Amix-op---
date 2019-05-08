@@ -3,6 +3,8 @@ extends Node2D
 export (PackedScene) var Mob
 var score
 
+signal new_game()
+
 func _ready():
 	randomize()
 	pass # Replace with function body.
