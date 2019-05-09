@@ -1,7 +1,7 @@
 extends AnimatedSprite
 
 func _ready():
-	hide()
+	#hide()
 	$Area2D/CollisionShape2D.disabled = true
 
 func _process(delta):

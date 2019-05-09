@@ -14,10 +14,10 @@ func _physics_process(delta):
 	
 	if velocidad.y < 100:
 		velocidad.y += gravedad;
-	if Input.is_action_pressed("ui_right")and velocidad.x < 200:
-		velocidad.x += 200;
-	if Input.is_action_pressed("ui_left") and velocidad.x > -200:
-		velocidad.x -= 20;
+	if Input.is_action_pressed("ui_right")and velocidad.x < 100:
+		velocidad.x += 10;
+	if Input.is_action_pressed("ui_left") and velocidad.x > -100:
+		velocidad.x -= 10;
 	if Input.is_action_just_released("ui_right"):
 		velocidad.x = 0;
 	if Input.is_action_just_released("ui_left"):

@@ -14,8 +14,8 @@ script/source = "extends RigidBody2D"
 animations = [ {
 "frames": [ null ],
 "loop": true,
-"name": "swim",
-"speed": 5.0
+"name": "walk",
+"speed": 4.0
 }, {
 "frames": [ null, null ],
 "loop": true,
@@ -24,8 +24,8 @@ animations = [ {
 }, {
 "frames": [ null ],
 "loop": true,
-"name": "walk",
-"speed": 4.0
+"name": "swim",
+"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=3]
@@ -54,7 +54,7 @@ Mob = SubResource( 4 )
 margin_left = 6.0
 margin_top = 2.0
 margin_right = 757.0
-margin_bottom = 859.0
+margin_bottom = 616.0
 texture = ExtResource( 2 )
 expand = true
 
@@ -72,13 +72,12 @@ one_shot = true
 position = Vector2( 367.535, 409.897 )
 
 [node name="Generador" parent="." instance=ExtResource( 4 )]
-position = Vector2( 570.771, 156.624 )
+position = Vector2( 822.524, 146.554 )
 
 [node name="Generador2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 241.555, 514.278 )
+position = Vector2( 385.153, 665.616 )
 
 [node name="HUD" parent="." instance=ExtResource( 6 )]
-
 [connection signal="new_game" from="." to="." method="new_game"]
 [connection signal="timeout" from="ScoreTimer" to="." method="_on_ScoreTimer_timeout"]
 [connection signal="timeout" from="StartTimer" to="." method="_on_StartTimer_timeout"]
