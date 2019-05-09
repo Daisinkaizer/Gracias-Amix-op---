@@ -19,6 +19,10 @@ config/name="Gracias amix"
 run/main_scene="res://escenas/Mundo/mundo.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=755
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
