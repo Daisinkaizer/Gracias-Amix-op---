@@ -1,8 +1,8 @@
 extends AnimatedSprite
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+func _ready():
+	$Area2D/CollisionShape2D.disabled = true
+	#hide()
 
 func _process(delta):
 	position.x -= 5

@@ -1,19 +1,84 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://escenas/Mundo/mundo.gd" type="Script" id=1]
-[ext_resource path="res://escenas/Personaje/Movimiento_Personaje.tscn" type="PackedScene" id=2]
-[ext_resource path="res://escenas/Generador/Generador.tscn" type="PackedScene" id=3]
-[ext_resource path="res://escenas/Generador2/Generador2.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/fondo.jpg" type="Texture" id=2]
+[ext_resource path="res://escenas/Personaje/Personaje.tscn" type="PackedScene" id=3]
+[ext_resource path="res://escenas/Generador/Generador.tscn" type="PackedScene" id=4]
+[ext_resource path="res://escenas/Generador2/Generador2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://escenas/HUD.tscn" type="PackedScene" id=6]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends RigidBody2D"
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ null ],
+"loop": true,
+"name": "walk",
+"speed": 4.0
+}, {
+"frames": [ null, null ],
+"loop": true,
+"name": "fly",
+"speed": 3.0
+}, {
+"frames": [ null ],
+"loop": true,
+"name": "swim",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 338.528, 88.7364 )
+
+[sub_resource type="PackedScene" id=4]
+_bundled = {
+"conn_count": 1,
+"conns": PoolIntArray( 3, 0, 15, 14, 2, 0 ),
+"editable_instances": [  ],
+"names": PoolStringArray( "Mob", "gravity_scale", "script", "__meta__", "RigidBody2D", "AnimatedSprite", "scale", "frames", "animation", "speed_scale", "CollisionShape2D", "shape", "Visibility", "VisibilityNotifier2D", "_on_Visibility_screen_exited", "screen_exited" ),
+"node_count": 4,
+"node_paths": [  ],
+"nodes": PoolIntArray( -1, -1, 4, 0, -1, 3, 1, 0, 2, 1, 3, 2, 0, 0, 0, 5, 5, -1, 4, 6, 3, 7, 4, 8, 5, 9, 6, 0, 0, 0, 10, 10, -1, 1, 11, 7, 0, 0, 0, 13, 12, -1, 0, 0 ),
+"variants": [ 0.0, SubResource( 1 ), {
+"_edit_group_": true
+}, Vector2( 0.75, 0.75 ), SubResource( 2 ), "walk", 0.75, SubResource( 3 ) ],
+"version": 2
+}
 
 [node name="mundo" type="Node2D"]
 script = ExtResource( 1 )
+Mob = SubResource( 4 )
 
-[node name="KinematicBody2D" parent="." instance=ExtResource( 2 )]
-position = Vector2( 75.1133, 96.4031 )
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 6.0
+margin_top = 2.0
+margin_right = 757.0
+margin_bottom = 616.0
+texture = ExtResource( 2 )
+expand = true
 
-[node name="Generador" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1044.22, 91.7573 )
+[node name="Personaje" parent="." instance=ExtResource( 3 )]
+position = Vector2( 52.9058, 53.8388 )
 
-[node name="Generador2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 332.136, 483.341 )
+[node name="ScoreTimer" type="Timer" parent="."]
+one_shot = true
 
+[node name="StartTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="StartPosition" type="Position2D" parent="."]
+position = Vector2( 367.535, 409.897 )
+
+[node name="Generador" parent="." instance=ExtResource( 4 )]
+position = Vector2( 822.524, 146.554 )
+
+[node name="Generador2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 385.153, 665.616 )
+
+[node name="HUD" parent="." instance=ExtResource( 6 )]
+[connection signal="new_game" from="." to="." method="new_game"]
+[connection signal="timeout" from="ScoreTimer" to="." method="_on_ScoreTimer_timeout"]
+[connection signal="timeout" from="StartTimer" to="." method="_on_StartTimer_timeout"]
+[connection signal="start_game" from="HUD" to="." method="start_game"]
