@@ -1,0 +1,61 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://escenas/Personaje/KinematicBody2D.gd" type="Script" id=1]
+[ext_resource path="res://assets/Nadando/buzo3.png" type="Texture" id=2]
+[ext_resource path="res://assets/Nadando/buzo2.png" type="Texture" id=3]
+[ext_resource path="res://assets/Nadando/buzo1.png" type="Texture" id=4]
+[ext_resource path="res://assets/Nadando/buzo5.png" type="Texture" id=5]
+[ext_resource path="res://assets/Nadando/buzo4.png" type="Texture" id=6]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "Muerto",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "Nadando",
+"speed": 7.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "Dañado",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 262.538, 119.195 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 25.2918, 11.6461 )
+
+[node name="Personaje" type="KinematicBody2D"]
+position = Vector2( -2.05054, 2.94916 )
+scale = Vector2( 1.92, 1.92 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Personaje" type="AnimatedSprite" parent="."]
+position = Vector2( 1.36569, 0.468046 )
+scale = Vector2( 0.0960622, 0.0960622 )
+frames = SubResource( 1 )
+animation = "Nadando"
+frame = 1
+playing = true
+
+[node name="Personaje" type="Area2D" parent="Personaje"]
+position = Vector2( -10.8437, 0 )
+
+[node name="Colission_prota" type="CollisionShape2D" parent="Personaje/Personaje"]
+position = Vector2( -5.42183, -5.42184 )
+shape = SubResource( 2 )
+
+[node name="colision_personaje" type="CollisionShape2D" parent="."]
+shape = SubResource( 3 )
+
+[connection signal="hit" from="." to="." method="_on_Personaje_hit"]
+[connection signal="area_entered" from="Personaje/Personaje" to="." method="_on_Area2D_area_entered"]
