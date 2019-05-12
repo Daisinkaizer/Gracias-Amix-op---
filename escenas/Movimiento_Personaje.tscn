@@ -11,6 +11,11 @@
 animations = [ {
 "frames": [  ],
 "loop": true,
+"name": "Muerto",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
 "name": "Dañado",
 "speed": 5.0
 }, {
@@ -18,15 +23,10 @@ animations = [ {
 "loop": true,
 "name": "Nadando",
 "speed": 7.0
-}, {
-"frames": [  ],
-"loop": true,
-"name": "Muerto",
-"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 25.2918, 11.6461 )
+extents = Vector2( 14.3834, 3.88309 )
 
 [node name="Personaje" type="KinematicBody2D"]
 position = Vector2( -2.05054, 2.94916 )
@@ -41,8 +41,9 @@ position = Vector2( 1.36569, 0.468046 )
 scale = Vector2( 0.0960622, 0.0960622 )
 frames = SubResource( 1 )
 animation = "Nadando"
-frame = 7
+frame = 3
 playing = true
 
 [node name="colision_personaje" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
+
