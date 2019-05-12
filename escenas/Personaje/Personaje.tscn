@@ -9,15 +9,15 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [  ],
-"loop": true,
-"name": "Muerto",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "Nadando",
 "speed": 7.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "Muerto",
+"speed": 5.0
 }, {
 "frames": [  ],
 "loop": true,
@@ -26,10 +26,10 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 262.538, 119.195 )
+extents = Vector2( 142.988, 25.2254 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 25.2918, 11.6461 )
+extents = Vector2( 13.8204, 2.75743 )
 
 [node name="Personaje" type="KinematicBody2D"]
 position = Vector2( -2.05054, 2.94916 )
@@ -44,7 +44,7 @@ position = Vector2( 1.36569, 0.468046 )
 scale = Vector2( 0.0960622, 0.0960622 )
 frames = SubResource( 1 )
 animation = "Nadando"
-frame = 1
+frame = 6
 playing = true
 
 [node name="Personaje" type="Area2D" parent="Personaje"]
