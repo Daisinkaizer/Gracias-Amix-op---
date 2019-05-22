@@ -41,7 +41,7 @@ position = Vector2( 1.36569, 0.468046 )
 scale = Vector2( 0.0960622, 0.0960622 )
 frames = SubResource( 1 )
 animation = "Nadando"
-frame = 7
+frame = 3
 playing = true
 
 [node name="colision_personaje" type="CollisionShape2D" parent="."]
