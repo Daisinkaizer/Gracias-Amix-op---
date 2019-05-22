@@ -38,7 +38,6 @@ position = Vector2( 822.524, 146.554 )
 position = Vector2( 385.153, 665.616 )
 
 [node name="HUD" parent="." instance=ExtResource( 6 )]
-
 [connection signal="new_game" from="." to="." method="new_game"]
 [connection signal="timeout" from="ScoreTimer" to="." method="_on_ScoreTimer_timeout"]
 [connection signal="timeout" from="StartTimer" to="." method="_on_StartTimer_timeout"]
