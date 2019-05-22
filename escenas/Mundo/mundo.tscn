@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://escenas/Mundo/mundo.gd" type="Script" id=1]
-[ext_resource path="res://assets/fondo.jpg" type="Texture" id=2]
+[ext_resource path="res://assets/fondo.png" type="Texture" id=2]
 [ext_resource path="res://escenas/Personaje/Personaje.tscn" type="PackedScene" id=3]
 [ext_resource path="res://escenas/Generador/Generador.tscn" type="PackedScene" id=4]
 [ext_resource path="res://escenas/Generador2/Generador2.tscn" type="PackedScene" id=5]
@@ -11,10 +11,10 @@
 script = ExtResource( 1 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_left = 6.0
-margin_top = 2.0
-margin_right = 757.0
-margin_bottom = 616.0
+margin_left = 1.43884
+margin_top = -0.432007
+margin_right = 1986.44
+margin_bottom = 597.568
 texture = ExtResource( 2 )
 expand = true
 
