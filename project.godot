@@ -16,8 +16,12 @@ _global_script_class_icons={
 [application]
 
 config/name="Gracias amix"
-run/main_scene="res://escenas/Movimiento_Personaje.tscn"
+run/main_scene="res://escenas/Mundo/mundo.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=755
 
 [rendering]
 
