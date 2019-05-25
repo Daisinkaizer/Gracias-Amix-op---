@@ -4,7 +4,7 @@ var Objetivo = preload("res://escenas/Tiburon/Tiburon.tscn")
 
 
 func _ready():
-	$Timer.start()
+	$Timer.start(5)
 	var objetivoInstancia = Objetivo.instance() # Crea una instancia de Objetivo
 	add_child(objetivoInstancia)
 	pass # Replace with function body.
